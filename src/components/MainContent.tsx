@@ -1,4 +1,5 @@
 import styles from "./MainContent.module.css";
+import Tooltip from "./Tooltip";
 interface Column {
   id: string;
   title: string;
@@ -19,6 +20,7 @@ export default function MainContent({ columns }: MainContentProps) {
             {col.tasks.map((task, i) => (
               <div key={i} className={styles.card}>
                 {task}
+                <Tooltip />
               </div>
             ))}
           </div>

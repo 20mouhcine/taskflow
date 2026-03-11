@@ -1,17 +1,21 @@
-.board{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-    align-items: center;
+.main {
+    flex: 1;
+    min-width: 0;
+    overflow: auto;
+    padding: 20px;
 }
 
-.column{
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    align-items: start;
+}
+
+.column {
     background: #f5f5f5;
     border-radius: 16px;
     padding: 24px;
-    margin: 10px;
-    width: 500px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
@@ -47,4 +51,14 @@
     box-shadow: 0 4px 16px rgba(27, 140, 62, 0.2);
     transform: translateX(4px);
     border-color: #1B8C3E;
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 12px;
+    }
+
+    .column {
+        padding: 16px;
+    }
 }
