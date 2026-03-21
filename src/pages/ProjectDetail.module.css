@@ -1,0 +1,28 @@
+.layout{
+    display: flex;
+    height: 100vh;
+}
+.loading{
+    padding: 2rem;;
+}
+
+.main{
+    padding: 2rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dot{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.info{
+    color: gray;
+}
