@@ -21,3 +21,53 @@ Q7 : Arrêtez json-server et tentez un POST. Le message s'affiche ?Oui, le messa
 
 
 Q8 : Avec fetch, un 404 ne lance PAS d'erreur. Avec Axios, que se passe-t-il ?Contrairement à fetch, Axios rejette automatiquement la promesse (il va directement dans le catch) si le code de statut HTTP est en dehors de la plage 2xx (comme un 404 ou un 500). Cela simplifie la gestion des erreurs car on n'a pas besoin de vérifier manuellement si response.ok est vrai.
+
+
+########################### Seance 4 ###########################
+
+Q1. Zéro ligne de CSS externe. Tout le style est inline via les props sx={{}} directement dans le JSX. En comparaison, un Header.module.css classique contient plus de 40 lignes
+
+Q2. MUI contient beaucoup de sx={{}} par contre Bootstrap contient des classes css
+donc Bootsrap est plus lisible et plus court
+
+Q3. Je préfère sx={{}} car le style est directement lié au composant, ce qui facilite la maintenance. Je n'ai pas besoin de jongler entre un fichier JSX et un fichier CSS.
+
+Q4. Material UI:    
+            Installation-> 4 packages
+            Nb de composants utilisés -> 10
+            Lignes de CSS écrites -> 0
+            Système de style -> sx={{}}
+            Personnalisation couleur -> via sx
+            Responsive -> oui
+            Lisibilité du code -> Moyenne
+            Documentation -> excellente
+            Préférence -> Pour apps complexes
+    
+    React-Bootstrap:
+            Installation -> 2 packages
+            Nb de composants utilisés -> 7
+            Lignes de CSS écrites -> 0
+            Système de style -> classes CSS
+            Personnalisation couleurs -> via css
+            Responsive -> Oui (grids)
+            Lisibilité du code -> Bonne
+            Documentation -> Bonne
+            Préférence -> Pour prototypes rapides
+
+    Choix = Material UI car elle offre des composants complexes prets à l'emploi et un design professionnel
+
+    a) Firebase : React -> Firebase services -> Firestore(base de données)
+    b)  Express + MongoDB : React -> axios -> express -> Mongodb
+
+Q5. React s'exécute dans le navigateur et le code sera lisible via les DevTools
+Q6. Aucune sécurité : tout le monde peut faire DELETE /users/1 sans aucune authentification
+    Pas scalable : la "base de données" est un fichier JSON chargé en RAM
+    Pas de logique métier : impossible d'ajouter du hachage de mots de passe (bcrypt),de valider des règles complexes, de gérer des transactions. C'est un CRUD brut sans aucune intelligence.
+
+Q7. Firebase a conçu un SDK JavaScript spécifiquement pour tourner dans le navigateur. Ce SDK communique avec les serveurs Google via HTTPS, un protocole que les navigateurs comprennent parfaitement. La sécurité n'est pas assurée par un backend Express, mais par les Security Rules de Firebase
+
+Q8.  Passer en prod, c'est essentiellement remplacer json-server par un vrai backend (Express + BDD), sécuriser l'auth avec JWT et bcrypt, passer tout en HTTPS, gérer les secrets dans des variables d'environnement, puis déployer sur des hébergeurs dédiés.
+
+Q9 — Les deux risques majeurs sont la taille du bundle (MUI ajoute ~400 KB) qui ralentit le chargement, et les mises à jour cassantes entre versions majeures qui peuvent imposer une réécriture partielle de l'app. On y ajoute le risque d'abandon du projet par ses mainteneurs.
+
+Q10. Pour une app en production avec beaucoup d'utilisateurs, Express + Socket.io donne plus de contrôle et coûte moins cher à l'usage.
