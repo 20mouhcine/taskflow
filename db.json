@@ -39,6 +39,11 @@
       "id": "727a",
       "name": "test",
       "color": "#8a2424"
+    },
+    {
+      "id": "c6d8",
+      "name": "test",
+      "color": "#3498db"
     }
   ],
   "columns": [

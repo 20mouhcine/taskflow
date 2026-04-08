@@ -13,6 +13,7 @@ interface SidebarProps {
   onDelete?: (id: string) => void;
 }
 export default function Sidebar({ projects, isOpen, onRename, onDelete }: SidebarProps) {
+  console.log("Sidebar re-Render")
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editName, setEditName] = useState('');
 
