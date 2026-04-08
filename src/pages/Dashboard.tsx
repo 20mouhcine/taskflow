@@ -1,14 +1,18 @@
 import { useState, useCallback } from 'react'; 
 import api from '../api/axios'; 
-import Header from '../components/Header'; 
+import HeaderBS from '../components/HeaderBS';
 import Sidebar from '../components/Sidebar'; 
 import MainContent from '../components/MainContent'; 
 import ProjectForm from '../components/ProjectForm';
 import styles from './Dashboard.module.css'; 
+<<<<<<< HEAD
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState, AppDispatch } from '../store';
 import { logout } from '../features/auth/authSlice';
 import useProjects from '../hooks/useProjects';
+=======
+import HeaderMUI from '../components/HeaderMUI';
+>>>>>>> eacec934a4a37ab072573a116ec6c83fd8f5e607
   
 interface Project { id: string; name: string; color: string; } 
 interface Column { id: string; title: string; tasks: string[]; } 
@@ -77,7 +81,7 @@ export default function Dashboard() {
 
   return ( 
     <div className={styles.layout}> 
-      <Header 
+      <HeaderMUI
         title="TaskFlow" 
         onMenuClick={() => setSidebarOpen(p => !p)} 
         userName={user?.name} 

@@ -34,6 +34,7 @@
       "id": "682a",
       "name": "Todo",
       "color": "#365163"
+<<<<<<< HEAD
     },
     {
       "id": "727a",
@@ -44,6 +45,8 @@
       "id": "c6d8",
       "name": "test",
       "color": "#3498db"
+=======
+>>>>>>> eacec934a4a37ab072573a116ec6c83fd8f5e607
     }
   ],
   "columns": [

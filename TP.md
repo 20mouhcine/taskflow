@@ -70,6 +70,7 @@ Q8.  Passer en prod, c'est essentiellement remplacer json-server par un vrai bac
 
 Q9 — Les deux risques majeurs sont la taille du bundle (MUI ajoute ~400 KB) qui ralentit le chargement, et les mises à jour cassantes entre versions majeures qui peuvent imposer une réécriture partielle de l'app. On y ajoute le risque d'abandon du projet par ses mainteneurs.
 
+<<<<<<< HEAD
 Q10. Pour une app en production avec beaucoup d'utilisateurs, Express + Socket.io donne plus de contrôle et coûte moins cher à l'usage.
 
 ##################### Seance 5 #################################
@@ -79,3 +80,6 @@ Q7. React.memo empêche le re-render du composant enfant quand les props restent
 React.memo compare les props du composant Si toutes les props sont identiques → Pas de re-render
 
 Q8.useMemo retourne une valeur mémoïsée, useCallback retourne une fonction mémoïsée,
+=======
+Q10. Pour une app en production avec beaucoup d'utilisateurs, Express + Socket.io donne plus de contrôle et coûte moins cher à l'usage.
+>>>>>>> eacec934a4a37ab072573a116ec6c83fd8f5e607
